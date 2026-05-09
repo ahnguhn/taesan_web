@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>매수 후보 [A] 2026-05-09 19:17</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #1a1a2e; color: #e0e0e0; padding: 20px; }
+  h1 { color: #e0c070; margin-bottom: 6px; font-size: 1.4em; }
+  .meta { color: #888; font-size: 0.85em; margin-bottom: 18px; }
+  .badge { display: inline-block; background: #2c3e50; border: 1px solid #4a5568; border-radius: 4px;
+            padding: 2px 8px; font-size: 0.78em; margin-right: 6px; color: #a0b0c0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
+  th { background: #16213e; color: #a0c4e8; padding: 10px 8px; text-align: center;
+        border-bottom: 2px solid #0f3460; white-space: nowrap; cursor: default; user-select: none; }
+  th.sortable { cursor: pointer; }
+  th.sortable:hover { background: #1e3a5e; color: #e0d070; }
+  th.sort-asc::after  { content: ' ▲'; font-size: 0.75em; color: #f1c40f; }
+  th.sort-desc::after { content: ' ▼'; font-size: 0.75em; color: #f1c40f; }
+  td { padding: 9px 8px; border-bottom: 1px solid #2a2a3e; vertical-align: top; text-align: center; }
+  tr:hover td { background: #1e2a40; }
+  td.code { font-family: monospace; font-size: 0.9em; color: #89b4fa; }
+  td.name { font-weight: bold; color: #cdd6f4; text-align: left; }
+  td.score { font-size: 1.15em; font-weight: bold; color: #f1c40f; }
+  td.detail { text-align: left; font-size: 0.82em; color: #aaa; line-height: 1.6; }
+  .label { color: #7fb3d3; font-weight: bold; }
+  .reason { color: #bbb; font-style: italic; font-size: 0.9em; }
+  .filter-bar { background: #16213e; border: 1px solid #0f3460; border-radius: 6px;
+                 padding: 10px 14px; margin-bottom: 14px; font-size: 0.85em; color: #a0b0c0; }
+  .count { color: #f1c40f; font-weight: bold; font-size: 1.1em; }
+  th.col-check { width: 42px; padding: 8px 4px !important; font-size: 0.85em; color: #7fb3d3; }
+  td.col-check { padding: 6px 4px !important; vertical-align: middle; }
+  .row-check-label { cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .row-check { width: 16px; height: 16px; cursor: pointer; accent-color: #2ecc71; }
+  tbody tr:has(.row-check:checked) td {
+    background: rgba(39, 174, 96, 0.18) !important;
+    box-shadow: inset 4px 0 0 0 #2ecc71;
+  }
+  tbody tr:has(.row-check:checked):hover td {
+    background: rgba(39, 174, 96, 0.28) !important;
+  }
+  .btn-clear-hl {
+    margin-left: 10px; padding: 4px 10px; font-size: 0.85em;
+    background: #2c3e50; border: 1px solid #4a5568; border-radius: 4px;
+    color: #a0c4e8; cursor: pointer; font-family: inherit;
+  }
+  .btn-clear-hl:hover { background: #34495e; color: #e0d070; }
+</style>
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var table = document.querySelector('table');
+    var ths   = table.querySelectorAll('thead th.sortable');
+    var tbody = table.querySelector('tbody');
+    var sortCol  = -1;
+    var sortDesc = true;
+
+    var btnClear = document.getElementById('btn-clear-highlight');
+    function syncHighlightCellValue(row) {
+      if (!row || !row.cells || !row.cells.length) return;
+      var cb = row.querySelector('.row-check');
+      if (cb) {
+        row.cells[0].setAttribute('data-val', cb.checked ? '1' : '0');
+      }
+    }
+
+    function sortRowsByColumn(colIdx, desc) {
+      var rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort(function(a, b) {
+        var av = a.cells[colIdx].getAttribute('data-val') || '';
+        var bv = b.cells[colIdx].getAttribute('data-val') || '';
+        var an = parseFloat(av);
+        var bn = parseFloat(bv);
+        if (!isNaN(an) && !isNaN(bn)) {
+          return desc ? bn - an : an - bn;
+        }
+        return desc ? bv.localeCompare(av, 'ko') : av.localeCompare(bv, 'ko');
+      });
+      rows.forEach(function(r) { tbody.appendChild(r); });
+    }
+
+    tbody.querySelectorAll('tr').forEach(function(row) {
+      syncHighlightCellValue(row);
+      var cb = row.querySelector('.row-check');
+      if (cb) {
+        cb.addEventListener('change', function() {
+          syncHighlightCellValue(row);
+          if (sortCol === 0) {
+            sortRowsByColumn(sortCol, sortDesc);
+          }
+        });
+      }
+    });
+
+    if (btnClear) {
+      btnClear.addEventListener('click', function() {
+        tbody.querySelectorAll('tr').forEach(function(row) {
+          var cb = row.querySelector('.row-check');
+          if (cb) {
+            cb.checked = false;
+          }
+          syncHighlightCellValue(row);
+        });
+        if (sortCol === 0) {
+          sortRowsByColumn(sortCol, sortDesc);
+        }
+      });
+    }
+
+    ths.forEach(function(th, idx) {
+      th.addEventListener('click', function() {
+        var colIdx = th.cellIndex;
+        if (sortCol === colIdx) {
+          sortDesc = !sortDesc;
+        } else {
+          sortCol  = colIdx;
+          sortDesc = true;
+        }
+        ths.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
+        th.classList.add(sortDesc ? 'sort-desc' : 'sort-asc');
+
+        sortRowsByColumn(colIdx, sortDesc);
+      });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<h1>매수 후보 종목 — 전략 A</h1>
+<div class="meta">생성: 2026-05-09 19:17</div>
+<div class="filter-bar">
+  적용 필터:
+  <span class="badge">점수 ≥ 5점</span>
+  <span class="badge">키움/미래에셋 매도 상위</span>
+  <span class="badge">현재가 ≥ 20,000원</span>
+  <span class="badge">공매도 비율 &lt; 10%</span>
+  &nbsp;&nbsp;→ 해당 종목: <span class="count">13종목</span>
+  <button type="button" class="btn-clear-hl" id="btn-clear-highlight" title="체크한 행 강조를 모두 해제">강조 전체 해제</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th class="col-check sortable" title="행 체크 시 녹색으로 강조 / 클릭 정렬">강조</th>
+      <th class="sortable">종목코드</th>
+      <th class="sortable">종목명</th>
+      <th class="sortable">점수</th>
+      <th class="sortable">현재가</th>
+      <th class="sortable">등락률</th>
+      <th class="sortable">거래량</th>
+      <th class="sortable">호가비율<br>(매수/매도)</th>
+      <th class="sortable">매수잔량</th>
+      <th class="sortable">매도잔량</th>
+      <th class="sortable">잔량차이<br>(매수-매도)</th>
+      <th class="sortable">공매도<br>3일평균</th>
+      <th class="sortable">공매도 D-0</th>
+      <th class="sortable">공매도 D-1</th>
+      <th class="sortable">공매도 D-2</th>
+      <th class="sortable">거래원<br>판정</th>
+      <th>거래원 상세</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="005490">005490</td>
+          <td class="name" data-val="POSCO홀딩스">POSCO홀딩스</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="527000" style="font-weight:bold">527,000원</td>
+          <td data-val="-1.5" style="color:#2980b9;font-weight:bold">▼1.50%</td>
+          <td data-val="989213">989,213</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="2.12" style="color:#27ae60">2.1%</td>
+          <td data-val="1.71">1.7%</td>
+          <td data-val="2.54">2.5%</td>
+          <td data-val="2.1">2.1%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > NH투자증권 > 삼  성 > 한국투자증권 > 미래에셋<br>
+            <span class="label">매도상위</span> 키움증권 > 삼  성 > 한국투자증권 > 미래에셋 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,012 / 매도 1·2위=050,030)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="062040">062040</td>
+          <td class="name" data-val="산일전기">산일전기</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="330000" style="font-weight:bold">330,000원</td>
+          <td data-val="2.33" style="color:#c0392b;font-weight:bold">▲2.33%</td>
+          <td data-val="980703">980,703</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="1.53" style="color:#27ae60">1.5%</td>
+          <td data-val="2.51">2.5%</td>
+          <td data-val="0.97">1.0%</td>
+          <td data-val="1.12">1.1%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > 미래에셋 > NH투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 삼  성 > 신한투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,003 / 매도 1·2위=050,003)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="047040">047040</td>
+          <td class="name" data-val="대우건설">대우건설</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="32850" style="font-weight:bold">32,850원</td>
+          <td data-val="-1.05" style="color:#2980b9;font-weight:bold">▼1.05%</td>
+          <td data-val="6770847">6,770,847</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="5.29" style="color:#f39c12">5.3%</td>
+          <td data-val="5.99">6.0%</td>
+          <td data-val="4.31">4.3%</td>
+          <td data-val="5.58">5.6%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > NH투자증권 > 미래에셋 > 토  스 > KB증권<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > NH투자증권 > 삼  성 > 한국투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,012 / 매도 1·2위=050,005)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="006400">006400</td>
+          <td class="name" data-val="삼성SDI">삼성SDI</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="680000" style="font-weight:bold">680,000원</td>
+          <td data-val="-2.02" style="color:#2980b9;font-weight:bold">▼2.02%</td>
+          <td data-val="917914">917,914</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="1.11" style="color:#27ae60">1.1%</td>
+          <td data-val="0.71">0.7%</td>
+          <td data-val="1.04">1.0%</td>
+          <td data-val="1.57">1.6%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 미래에셋 > NH투자증권 > 삼  성 > 한국투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > KB증권 > 한  화 > 한국투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,005 / 매도 1·2위=050,005)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="016360">016360</td>
+          <td class="name" data-val="삼성증권">삼성증권</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="138600" style="font-weight:bold">138,600원</td>
+          <td data-val="-4.55" style="color:#2980b9;font-weight:bold">▼4.55%</td>
+          <td data-val="1983465">1,983,465</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="2.82" style="color:#27ae60">2.8%</td>
+          <td data-val="2.0">2.0%</td>
+          <td data-val="4.1">4.1%</td>
+          <td data-val="2.37">2.4%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 신한투자증권 > 한국투자증권 > 삼  성 > 모건스탠리<br>
+            <span class="label">매도상위</span> 키움증권 > 삼  성 > 한국투자증권 > 씨티그룹 > 미래에셋<br>
+            <span class="label">외국계 매수</span> 모건스탠리
+            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 씨티그룹<br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,002 / 매도 1·2위=050,030)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="003230">003230</td>
+          <td class="name" data-val="삼양식품">삼양식품</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="1359000" style="font-weight:bold">1,359,000원</td>
+          <td data-val="7.52" style="color:#c0392b;font-weight:bold">▲7.52%</td>
+          <td data-val="127405">127,405</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="5.38" style="color:#f39c12">5.4%</td>
+          <td data-val="6.88">6.9%</td>
+          <td data-val="3.25">3.2%</td>
+          <td data-val="6.02">6.0%</td>
+          <td data-val="2" style="color:#27ae60">🟢 적극매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 신한투자증권 > 한국투자증권 > NH투자증권 > 메릴린치 > JP모간서울<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 삼  성 > 신한투자증권<br>
+            <span class="label">외국계 매수</span> JP모간서울, 메릴린치
+            <br>
+            <span class="reason">적극매수: 키움 매도 상위 + 외국계 2개 단독 매수 → ['JP모간서울', '메릴린치'] (개인물량 외인 흡수)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="103590">103590</td>
+          <td class="name" data-val="일진전기">일진전기</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="143500" style="font-weight:bold">143,500원</td>
+          <td data-val="0.63" style="color:#c0392b;font-weight:bold">▲0.63%</td>
+          <td data-val="1081844">1,081,844</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="2.45" style="color:#27ae60">2.5%</td>
+          <td data-val="3.58">3.6%</td>
+          <td data-val="1.91">1.9%</td>
+          <td data-val="1.86">1.9%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > NH투자증권 > JP모간서울<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > 삼  성 > KB증권<br>
+            <span class="label">외국계 매수</span> JP모간서울
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,003 / 매도 1·2위=050,003)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="001440">001440</td>
+          <td class="name" data-val="대한전선">대한전선</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="72300" style="font-weight:bold">72,300원</td>
+          <td data-val="12.79" style="color:#c0392b;font-weight:bold">▲12.79%</td>
+          <td data-val="20346622">20,346,622</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="3.28" style="color:#27ae60">3.3%</td>
+          <td data-val="3.87">3.9%</td>
+          <td data-val="2.78">2.8%</td>
+          <td data-val="3.18">3.2%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > NH투자증권 > JP모간서울<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 미래에셋 > 신한투자증권<br>
+            <span class="label">외국계 매수</span> JP모간서울
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,003 / 매도 1·2위=050,003)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="042700">042700</td>
+          <td class="name" data-val="한미반도체">한미반도체</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="390000" style="font-weight:bold">390,000원</td>
+          <td data-val="-0.76" style="color:#2980b9;font-weight:bold">▼0.76%</td>
+          <td data-val="1256321">1,256,321</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="6.47" style="color:#f39c12">6.5%</td>
+          <td data-val="3.55">3.5%</td>
+          <td data-val="9.31">9.3%</td>
+          <td data-val="6.55">6.5%</td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="detail">
+            <span class="label">매수상위</span> NH투자증권 > 한국투자증권 > 키움증권 > 미래에셋 > 신한투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > 미래에셋 > JP모간서울<br>
+            <span class="label">외국계 매수</span> 없음
+            &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울<br>
+            <span class="reason">매수금지: 외국계 매도 1개 단독 이탈 → ['JP모간서울']</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="036460">036460</td>
+          <td class="name" data-val="한국가스공사">한국가스공사</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="38050" style="font-weight:bold">38,050원</td>
+          <td data-val="-1.04" style="color:#2980b9;font-weight:bold">▼1.04%</td>
+          <td data-val="360869">360,869</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="1.36" style="color:#27ae60">1.4%</td>
+          <td data-val="1.4">1.4%</td>
+          <td data-val="1.4">1.4%</td>
+          <td data-val="1.29">1.3%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 미래에셋 > 키움증권 > KB증권 > 삼  성 > 골드만삭스<br>
+            <span class="label">매도상위</span> 키움증권 > NH투자증권 > 신한투자증권 > 삼  성 > 한국투자증권<br>
+            <span class="label">외국계 매수</span> 골드만삭스
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=005,050 / 매도 1·2위=050,012)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="006260">006260</td>
+          <td class="name" data-val="LS">LS</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="545000" style="font-weight:bold">545,000원</td>
+          <td data-val="7.5" style="color:#c0392b;font-weight:bold">▲7.50%</td>
+          <td data-val="445037">445,037</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="2.59" style="color:#27ae60">2.6%</td>
+          <td data-val="1.82">1.8%</td>
+          <td data-val="2.74">2.7%</td>
+          <td data-val="3.22">3.2%</td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 한국투자증권 > 신한투자증권 > 삼  성 > 키움증권 > 메리츠<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 신한투자증권 > 미래에셋<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">매수금지: 키움 매도 상위, 외국계 균형 불리 (매수 0 / 매도 0)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="020150">020150</td>
+          <td class="name" data-val="롯데에너지머티리얼즈">롯데에너지머티리얼즈</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="72600" style="font-weight:bold">72,600원</td>
+          <td data-val="-1.89" style="color:#2980b9;font-weight:bold">▼1.89%</td>
+          <td data-val="588513">588,513</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="4.7" style="color:#27ae60">4.7%</td>
+          <td data-val="6.76">6.8%</td>
+          <td data-val="3.93">3.9%</td>
+          <td data-val="3.4">3.4%</td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 신한투자증권 > 삼  성 > 키움증권 > 한국투자증권 > 미래에셋<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 신한투자증권 > 한국투자증권 > 삼  성<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">매수금지: 키움 매도 상위, 외국계 균형 불리 (매수 0 / 매도 0)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="066570">066570</td>
+          <td class="name" data-val="LG전자">LG전자</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="154100" style="font-weight:bold">154,100원</td>
+          <td data-val="3.63" style="color:#c0392b;font-weight:bold">▲3.63%</td>
+          <td data-val="3589081">3,589,081</td>
+          <td data-val="9.99" style="color:#27ae60;font-weight:bold">9.99<br><small>매수우위</small></td>
+          <td data-val="0">0</td>
+          <td data-val="0">0</td>
+          <td data-val="0" style="color:#aaa">+0</td>
+          <td data-val="6.09" style="color:#f39c12">6.1%</td>
+          <td data-val="8.28">8.3%</td>
+          <td data-val="2.98">3.0%</td>
+          <td data-val="7.02">7.0%</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > 미래에셋 > NH투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 미래에셋 > 신한투자증권 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 상위 (매수 1·2위=050,003 / 매도 1·2위=050,003)</span>
+          </td>
+        </tr>
+  </tbody>
+</table>
+</body>
+</html>
