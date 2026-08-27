@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>전략 A 평가 결과 2026-08-26 15:10:16</title>
+<title>전략 A 평가 결과 2026-08-27 09:10:22</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -254,8 +254,8 @@
 </script>
 </head>
 <body>
-<h1>전략 A 평가 결과 — 전체 19종목 &nbsp;<small style="color:#7fb3d3">[슬롯 15:00]</small></h1>
-<div class="meta time-meta"><span class="time-label">생성</span><span class="time-val" id="created-at">2026-08-26 15:10:16</span><span class="time-sep">|</span><span class="time-label">현재</span><span class="time-val" id="clock-now"></span></div>
+<h1>전략 A 평가 결과 — 전체 22종목 &nbsp;<small style="color:#7fb3d3">[슬롯 09:00]</small></h1>
+<div class="meta time-meta"><span class="time-label">생성</span><span class="time-val" id="created-at">2026-08-27 09:10:22</span><span class="time-sep">|</span><span class="time-label">현재</span><span class="time-val" id="clock-now"></span></div>
 <div class="filter-bar">
   선별 기준:
   <span class="badge">점수 ≥ 6/11점</span>
@@ -265,7 +265,7 @@
   <span class="badge">공매도 3일평균 &lt; 10%</span>
   <span class="badge">직전일 공매도 &lt; 10%</span>
   
-  &nbsp;&nbsp;→ 평가 <span class="count">19종목</span> / 선정 <span class="count">1종목</span>
+  &nbsp;&nbsp;→ 평가 <span class="count">22종목</span> / 선정 <span class="count">11종목</span>
   <button type="button" class="btn-clear-hl" id="btn-clear-highlight" title="체크한 행 강조를 모두 해제">강조 전체 해제</button>
   <button type="button" class="btn-clear-hl" id="btn-exp-csv" title="강조 체크한 종목을 CSV(종목명,코드)로 저장 — realtime_kium.csv">✔ CSV 저장</button>
   <button type="button" class="btn-clear-hl" id="btn-exp-xlsx" title="강조 체크한 종목을 엑셀(종목코드,종목명)로 저장 — realtime_ls.xlsx">✔ 엑셀 저장</button>
@@ -302,488 +302,563 @@
       <th class="sortable">호가비율<br>(매수/매도)</th>
       <th class="sortable">잔량차이<br>(매수-매도)</th>
       <th class="sortable">공매도<br>3일평균</th>
-      <th class="sortable">공매도 D-0<br><small style="color:#888">2026-08-25</small></th>
-      <th class="sortable">공매도 D-1<br><small style="color:#888">2026-08-24</small></th>
-      <th class="sortable">공매도 D-2<br><small style="color:#888">2026-08-21</small></th>
+      <th class="sortable">공매도 D-0<br><small style="color:#888">2026-08-26</small></th>
+      <th class="sortable">공매도 D-1<br><small style="color:#888">2026-08-25</small></th>
+      <th class="sortable">공매도 D-2<br><small style="color:#888">2026-08-24</small></th>
       <th class="sortable">거래원<br>판정</th>
       <th>거래원 상세</th>
     </tr>
   </thead>
   <tbody>
     
-        <tr class="sel-row" data-price="220500" data-vol="1018957" data-flu="0.0">
+        <tr class="sel-row" data-price="270000" data-vol="6617926" data-flu="3.25">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="005930">005930</td>
+          <td class="name" data-val="삼성전자">삼성전자</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="9">9점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.69% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +3.66% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +0.37%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.22 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.54 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.4% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="270000" style="font-weight:bold">270,000원</td>
+          <td data-val="3.25" style="color:#c0392b;font-weight:bold">▲3.25%</td>
+          <td data-val="6617926">6,617,926</td>
+          <td data-val="0.54" style="color:#27ae60;font-weight:bold">0.54<br><small>매도우위</small></td>
+          <td data-val="-404174" style="color:#e74c3c" title="매수 480,849 / 매도 885,023">-404,174</td>
+          <td data-val="7.07" style="color:#f39c12">7.1%</td>
+          <td data-val="2.92" style="color:#e0e0e0">2.9%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="6.94" style="color:#e0e0e0">6.9%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="11.34" style="color:#e74c3c">11.3%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 미래에셋 > 삼  성 > 한국투자증권 > NH투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 한국투자증권 > KB증권 > 삼  성<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="2926000" data-vol="24166" data-flu="4.61">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="298040">298040</td>
+          <td class="name" data-val="효성중공업">효성중공업</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="8">8점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.64% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +4.13% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.00%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.67 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.95 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 12.0% (상단×0.97 이하)">✓</td><td data-val="2" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">2</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="2926000" style="font-weight:bold">2,926,000원</td>
+          <td data-val="4.61" style="color:#c0392b;font-weight:bold">▲4.61%</td>
+          <td data-val="24166">24,166</td>
+          <td data-val="0.95" style="color:#27ae60;font-weight:bold">0.95<br><small>매도우위</small></td>
+          <td data-val="-4" style="color:#e74c3c" title="매수 79 / 매도 83">-4</td>
+          <td data-val="8.45" style="color:#f39c12">8.4%</td>
+          <td data-val="6.89" style="color:#e0e0e0">6.9%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="6.41" style="color:#e0e0e0">6.4%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="12.05" style="color:#e74c3c">12.1%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="2" style="color:#27ae60">🟢 적극매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 신한투자증권 > 미래에셋 > JP모간서울<br>
+            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > NH투자증권 > 토  스 > 미래에셋<br>
+            <span class="label">외국계 매수</span> JP모간서울
+            <br>
+            <span class="reason">적극매수: 키움 매도 상위 + 외국계 1개 단독 매수 → ['JP모간서울'] (개인물량 외인 흡수)</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="1376000" data-vol="274035" data-flu="3.46">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="009150">009150</td>
+          <td class="name" data-val="삼성전기">삼성전기</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +2.47% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +3.18% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +0.95%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.31 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.72 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 13.9% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="1376000" style="font-weight:bold">1,376,000원</td>
+          <td data-val="3.46" style="color:#c0392b;font-weight:bold">▲3.46%</td>
+          <td data-val="274035">274,035</td>
+          <td data-val="2.72" style="color:#e74c3c;font-weight:bold">2.72<br><small>매수우위</small></td>
+          <td data-val="2380" style="color:#27ae60" title="매수 3,765 / 매도 1,385">+2,380</td>
+          <td data-val="7.06" style="color:#f39c12">7.1%</td>
+          <td data-val="5.83" style="color:#e0e0e0">5.8%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="8.96" style="color:#e0e0e0">9.0%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="6.38" style="color:#e0e0e0">6.4%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 미래에셋 > 신한투자증권 > NH투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 삼  성 > 한국투자증권 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움 매도 상위(매도 1위=050), 매수 1위=003 — 개인 물량을 타 창구가 흡수 (외국계 이탈 없음)</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="555000" data-vol="293217" data-flu="7.56">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="006400">006400</td>
+          <td class="name" data-val="삼성SDI">삼성SDI</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.09% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.58% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +7.35%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.74 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.15 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 1.2% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="555000" style="font-weight:bold">555,000원</td>
+          <td data-val="7.56" style="color:#c0392b;font-weight:bold">▲7.56%</td>
+          <td data-val="293217">293,217</td>
+          <td data-val="0.15" style="color:#27ae60;font-weight:bold">0.15<br><small>매도우위</small></td>
+          <td data-val="-11841" style="color:#e74c3c" title="매수 2,117 / 매도 13,958">-11,841</td>
+          <td data-val="5.31" style="color:#f39c12">5.3%</td>
+          <td data-val="6.53" style="color:#e0e0e0">6.5%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="6.64" style="color:#e0e0e0">6.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="2.76" style="color:#e0e0e0">2.8%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > NH투자증권 > 미래에셋<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 미래에셋 > 삼  성 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="209500" data-vol="541774" data-flu="3.97">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="010120">010120</td>
+          <td class="name" data-val="LS ELECTRIC">LS ELECTRIC</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.67% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.99% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.95%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.51 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.17 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 7.8% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="209500" style="font-weight:bold">209,500원</td>
+          <td data-val="3.97" style="color:#c0392b;font-weight:bold">▲3.97%</td>
+          <td data-val="541774">541,774</td>
+          <td data-val="1.17" style="color:#e74c3c;font-weight:bold">1.17<br><small>매수우위</small></td>
+          <td data-val="2310" style="color:#27ae60" title="매수 15,549 / 매도 13,239">+2,310</td>
+          <td data-val="9.57" style="color:#f39c12">9.6%</td>
+          <td data-val="9.11" style="color:#e0e0e0">9.1%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="10.57" style="color:#e74c3c">10.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="9.02" style="color:#e0e0e0">9.0%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 미래에셋 > 한국투자증권 > 신한투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 신한투자증권 > NH투자증권 > 미래에셋<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="1769000" data-vol="1328540" data-flu="4.8">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="000660">000660</td>
+          <td class="name" data-val="SK하이닉스">SK하이닉스</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.58% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +3.99% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.26%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.27 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.98 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 2.7% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="1769000" style="font-weight:bold">1,769,000원</td>
+          <td data-val="4.8" style="color:#c0392b;font-weight:bold">▲4.80%</td>
+          <td data-val="1328540">1,328,540</td>
+          <td data-val="0.98" style="color:#27ae60;font-weight:bold">0.98<br><small>매도우위</small></td>
+          <td data-val="-300" style="color:#e74c3c" title="매수 11,865 / 매도 12,165">-300</td>
+          <td data-val="5.0" style="color:#f39c12">5.0%</td>
+          <td data-val="5.46" style="color:#e0e0e0">5.5%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="4.59" style="color:#e0e0e0">4.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="4.94" style="color:#e0e0e0">4.9%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 미래에셋 > 삼  성 > 한국투자증권 > NH투자증권<br>
+            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 삼  성 > KB증권 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="33100" data-vol="199247" data-flu="0.61">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="009830">009830</td>
+          <td class="name" data-val="한화솔루션">한화솔루션</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.42% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.82% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -1.19%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최신 분봉 거래량 > 4봉 전">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.13 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.90 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 18.2% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="33100" style="font-weight:bold">33,100원</td>
+          <td data-val="0.61" style="color:#c0392b;font-weight:bold">▲0.61%</td>
+          <td data-val="199247">199,247</td>
+          <td data-val="0.9" style="color:#27ae60;font-weight:bold">0.90<br><small>매도우위</small></td>
+          <td data-val="-554" style="color:#e74c3c" title="매수 4,768 / 매도 5,322">-554</td>
+          <td data-val="7.13" style="color:#f39c12">7.1%</td>
+          <td data-val="5.8" style="color:#e0e0e0">5.8%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="10.27" style="color:#e74c3c">10.3%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="5.32" style="color:#e0e0e0">5.3%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > NH투자증권 > 신한투자증권 > 삼  성 > 미래에셋<br>
+            <span class="label">매도상위</span> 키움증권 > 신한투자증권 > NH투자증권 > 삼  성 > 한국투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr data-price="38000" data-vol="45867" data-flu="2.15">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="450080">450080</td>
+          <td class="name" data-val="에코프로머티">에코프로머티</td>
+          <td data-val="0" style="color:#555">─</td>
+          <td class="score" data-val="7">7점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.69% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.08% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.06%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최신 분봉 거래량 > 4봉 전">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.20 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.41 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 9.3% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="38000" style="font-weight:bold">38,000원</td>
+          <td data-val="2.15" style="color:#c0392b;font-weight:bold">▲2.15%</td>
+          <td data-val="45867">45,867</td>
+          <td data-val="1.41" style="color:#e74c3c;font-weight:bold">1.41<br><small>매수우위</small></td>
+          <td data-val="275" style="color:#27ae60" title="매수 954 / 매도 679">+275</td>
+          <td data-val="9.29" style="color:#f39c12">9.3%</td>
+          <td data-val="7.7" style="color:#e0e0e0">7.7%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="13.98" style="color:#e74c3c">14.0%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="6.2" style="color:#e0e0e0">6.2%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > NH투자증권 > 한국투자증권 > 유진투자증권 > KB증권<br>
+            <span class="label">매도상위</span> 신한투자증권 > NH투자증권 > 유진투자증권 > 한국투자증권 > 키움증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=002) — 개인 과열</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="783000" data-vol="73930" data-flu="6.82">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="267260">267260</td>
+          <td class="name" data-val="HD현대일렉트릭">HD현대일렉트릭</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.74% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +3.16% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +4.12%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.55 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.13 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 7.6% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="783000" style="font-weight:bold">783,000원</td>
+          <td data-val="6.82" style="color:#c0392b;font-weight:bold">▲6.82%</td>
+          <td data-val="73930">73,930</td>
+          <td data-val="1.13" style="color:#e74c3c;font-weight:bold">1.13<br><small>매수우위</small></td>
+          <td data-val="93" style="color:#27ae60" title="매수 794 / 매도 701">+93</td>
+          <td data-val="9.87" style="color:#f39c12">9.9%</td>
+          <td data-val="5.39" style="color:#e0e0e0">5.4%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="18.42" style="color:#e74c3c">18.4%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="5.79" style="color:#e0e0e0">5.8%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 신한투자증권 > 미래에셋 > 삼  성<br>
+            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > NH투자증권 > 미래에셋 > 삼  성<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움 매도 상위(매도 1위=003), 매수 1위=003 — 개인 물량을 타 창구가 흡수 (외국계 이탈 없음)</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="525000" data-vol="71111" data-flu="-0.94">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="128940">128940</td>
+          <td class="name" data-val="한미약품">한미약품</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.14% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.00% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.35%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.06 (기준 ≥ 0.08)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.77 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 -0.6% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="525000" style="font-weight:bold">525,000원</td>
+          <td data-val="-0.94" style="color:#2980b9;font-weight:bold">▼0.94%</td>
+          <td data-val="71111">71,111</td>
+          <td data-val="0.77" style="color:#27ae60;font-weight:bold">0.77<br><small>매도우위</small></td>
+          <td data-val="-462" style="color:#e74c3c" title="매수 1,566 / 매도 2,028">-462</td>
+          <td data-val="3.19" style="color:#27ae60">3.2%</td>
+          <td data-val="2.27" style="color:#e0e0e0">2.3%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="3.63" style="color:#e0e0e0">3.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="3.68" style="color:#e0e0e0">3.7%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 미래에셋 > NH투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 미래에셋 > NH투자증권 > 삼  성<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="120200" data-vol="300673" data-flu="-2.59">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="052690">052690</td>
+          <td class="name" data-val="한전기술">한전기술</td>
+          <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
+          <td class="score" data-val="6">6점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.57% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -2.06% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +0.92%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.07 (기준 ≥ 0.08)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.25 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 -3.6% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="120200" style="font-weight:bold">120,200원</td>
+          <td data-val="-2.59" style="color:#2980b9;font-weight:bold">▼2.59%</td>
+          <td data-val="300673">300,673</td>
+          <td data-val="0.25" style="color:#27ae60;font-weight:bold">0.25<br><small>매도우위</small></td>
+          <td data-val="-1177" style="color:#e74c3c" title="매수 393 / 매도 1,570">-1,177</td>
+          <td data-val="9.84" style="color:#f39c12">9.8%</td>
+          <td data-val="9.0" style="color:#e0e0e0">9.0%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="9.88" style="color:#e0e0e0">9.9%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="10.65" style="color:#e74c3c">10.7%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 미래에셋 > 삼  성<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 미래에셋 > 삼  성 > NH투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+          </td>
+        </tr>
+        <tr class="sel-row" data-price="223000" data-vol="263580" data-flu="1.36">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
           <td class="code" data-val="035420">035420</td>
           <td class="name" data-val="NAVER">NAVER</td>
           <td data-val="2" style="color:#2ecc71;font-weight:bold">★ 기본</td>
           <td class="score" data-val="6">6점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.70% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.45% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.90%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.63 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.87 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 6.4% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="220500" style="font-weight:bold">220,500원</td>
-          <td data-val="0.0" style="color:#555;font-weight:bold">─0.00%</td>
-          <td data-val="1018957">1,018,957</td>
-          <td data-val="0.87" style="color:#27ae60;font-weight:bold">0.87<br><small>매도우위</small></td>
-          <td data-val="-3596" style="color:#e74c3c" title="매수 24,879 / 매도 28,475">-3,596</td>
-          <td data-val="6.76" style="color:#f39c12">6.8%</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.96% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.36% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.45%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.23 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.08 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.5% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="223000" style="font-weight:bold">223,000원</td>
+          <td data-val="1.36" style="color:#c0392b;font-weight:bold">▲1.36%</td>
+          <td data-val="263580">263,580</td>
+          <td data-val="2.08" style="color:#e74c3c;font-weight:bold">2.08<br><small>매수우위</small></td>
+          <td data-val="15495" style="color:#27ae60" title="매수 29,866 / 매도 14,371">+15,495</td>
+          <td data-val="6.11" style="color:#f39c12">6.1%</td>
+          <td data-val="4.7" style="color:#e0e0e0">4.7%<br><small style="color:#888">2026-08-26</small></td>
           <td data-val="6.92" style="color:#e0e0e0">6.9%<br><small style="color:#888">2026-08-25</small></td>
           <td data-val="6.7" style="color:#e0e0e0">6.7%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="6.66" style="color:#e0e0e0">6.7%<br><small style="color:#888">2026-08-21</small></td>
           <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 신한투자증권 > 삼  성 > 한국투자증권 > 미래에셋<br>
-            <span class="label">매도상위</span> 키움증권 > 미래에셋 > NH투자증권 > 신한투자증권 > 한국투자증권<br>
+            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 미래에셋 > NH투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 신한투자증권 > 미래에셋<br>
             <span class="label">외국계 매수</span> 없음
             <br>
             <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
           </td>
         </tr>
-        <tr data-price="28350" data-vol="1138321" data-flu="3.09">
+        <tr data-price="52500" data-vol="6056" data-flu="0.96">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="001440">001440</td>
-          <td class="name" data-val="대한전선">대한전선</td>
+          <td class="code" data-val="285130">285130</td>
+          <td class="name" data-val="SK케미칼">SK케미칼</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="5">5점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.68% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.55% (기준 ≥ +0.3%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +2.53%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 1.27 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.54 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 11.4% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="28350" style="font-weight:bold">28,350원</td>
-          <td data-val="3.09" style="color:#c0392b;font-weight:bold">▲3.09%</td>
-          <td data-val="1138321">1,138,321</td>
-          <td data-val="0.54" style="color:#27ae60;font-weight:bold">0.54<br><small>매도우위</small></td>
-          <td data-val="-12949" style="color:#e74c3c" title="매수 14,910 / 매도 27,859">-12,949</td>
-          <td data-val="0.0" style="color:#27ae60">0.0%</td>
-          <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
-          <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
-          <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.34% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.38% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.16%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.04 (기준 ≥ 0.08)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.78 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 2.0% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
+          <td data-val="52500" style="font-weight:bold">52,500원</td>
+          <td data-val="0.96" style="color:#c0392b;font-weight:bold">▲0.96%</td>
+          <td data-val="6056">6,056</td>
+          <td data-val="0.78" style="color:#27ae60;font-weight:bold">0.78<br><small>매도우위</small></td>
+          <td data-val="-163" style="color:#e74c3c" title="매수 590 / 매도 753">-163</td>
+          <td data-val="7.76" style="color:#f39c12">7.8%</td>
+          <td data-val="8.63" style="color:#e0e0e0">8.6%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="12.61" style="color:#e74c3c">12.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="2.04" style="color:#e0e0e0">2.0%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 신한투자증권 > NH투자증권 > 하나증권 > 한국투자증권 > 미래에셋<br>
+            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > NH투자증권 > 토  스 > 신한투자증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 키움 매도 상위(매도 1위=050), 매수 1위=002 — 개인 물량을 타 창구가 흡수 (외국계 이탈 없음)</span>
+          </td>
+        </tr>
+        <tr data-price="194000" data-vol="65073" data-flu="0.31">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="068270">068270</td>
+          <td class="name" data-val="셀트리온">셀트리온</td>
+          <td data-val="0" style="color:#555">─</td>
+          <td class="score" data-val="5">5점</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.62% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.21% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +0.05%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.14 (기준 ≥ 0.08)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.44 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 6.8% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="194000" style="font-weight:bold">194,000원</td>
+          <td data-val="0.31" style="color:#c0392b;font-weight:bold">▲0.31%</td>
+          <td data-val="65073">65,073</td>
+          <td data-val="0.44" style="color:#27ae60;font-weight:bold">0.44<br><small>매도우위</small></td>
+          <td data-val="-574" style="color:#e74c3c" title="매수 447 / 매도 1,021">-574</td>
+          <td data-val="6.66" style="color:#f39c12">6.7%</td>
+          <td data-val="2.06" style="color:#e0e0e0">2.1%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="9.56" style="color:#e0e0e0">9.6%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="8.37" style="color:#e0e0e0">8.4%<br><small style="color:#888">2026-08-24</small></td>
           <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 신한투자증권 > 한국투자증권 > 신  영 > NH투자증권<br>
-            <span class="label">매도상위</span> 대  신 > 키움증권 > NH투자증권 > 미래에셋 > 한국투자증권<br>
+            <span class="label">매수상위</span> 키움증권 > NH투자증권 > 미래에셋 > 유진투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 한국투자증권 > 신한투자증권 > KB증권 > NH투자증권 > 키움증권<br>
             <span class="label">외국계 매수</span> 없음
             <br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=004) — 개인 과열</span>
+            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=003) — 개인 과열</span>
           </td>
         </tr>
-        <tr data-price="1333000" data-vol="783817" data-flu="-2.13">
+        <tr data-price="53400" data-vol="14701" data-flu="1.52">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="009150">009150</td>
-          <td class="name" data-val="삼성전기">삼성전기</td>
+          <td class="code" data-val="120110">120110</td>
+          <td class="name" data-val="코오롱인더">코오롱인더</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="5">5점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +4.40% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.02% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -4.10%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.75 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 4.45 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 16.7% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="1333000" style="font-weight:bold">1,333,000원</td>
-          <td data-val="-2.13" style="color:#2980b9;font-weight:bold">▼2.13%</td>
-          <td data-val="783817">783,817</td>
-          <td data-val="4.45" style="color:#e74c3c;font-weight:bold">4.45<br><small>매수우위</small></td>
-          <td data-val="4212" style="color:#27ae60" title="매수 5,432 / 매도 1,220">+4,212</td>
-          <td data-val="7.81" style="color:#f39c12">7.8%</td>
-          <td data-val="8.96" style="color:#e0e0e0">9.0%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="6.38" style="color:#e0e0e0">6.4%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="8.09" style="color:#e0e0e0">8.1%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.66% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.00% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.14%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.06 (기준 ≥ 0.08)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.99 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 13.4% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="53400" style="font-weight:bold">53,400원</td>
+          <td data-val="1.52" style="color:#c0392b;font-weight:bold">▲1.52%</td>
+          <td data-val="14701">14,701</td>
+          <td data-val="0.99" style="color:#27ae60;font-weight:bold">0.99<br><small>매도우위</small></td>
+          <td data-val="-19" style="color:#e74c3c" title="매수 1,575 / 매도 1,594">-19</td>
+          <td data-val="6.25" style="color:#f39c12">6.2%</td>
+          <td data-val="8.1" style="color:#e0e0e0">8.1%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="6.46" style="color:#e0e0e0">6.5%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="4.2" style="color:#e0e0e0">4.2%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 유비에스증권 > 미래에셋 > 한  화<br>
-            <span class="label">매도상위</span> 키움증권 > 한국투자증권 > 미래에셋 > 유진투자증권 > KB증권<br>
-            <span class="label">외국계 매수</span> 유비에스증권
+            <span class="label">매수상위</span> 키움증권 > 대  신 > 한국투자증권 > 신한투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > 신한투자증권 > 유안타 > 미래에셋<br>
+            <span class="label">외국계 매수</span> 없음
             <br>
-            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=003) — 개인 과열</span>
           </td>
         </tr>
-        <tr data-price="23950" data-vol="452164" data-flu="3.46">
+        <tr data-price="23800" data-vol="38868" data-flu="-0.21">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
           <td class="code" data-val="017960">017960</td>
           <td class="name" data-val="한국카본">한국카본</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="5">5점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.33% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.00% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +2.35%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 1.38 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.96 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 10.3% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="23950" style="font-weight:bold">23,950원</td>
-          <td data-val="3.46" style="color:#c0392b;font-weight:bold">▲3.46%</td>
-          <td data-val="452164">452,164</td>
-          <td data-val="0.96" style="color:#27ae60;font-weight:bold">0.96<br><small>매도우위</small></td>
-          <td data-val="-326" style="color:#e74c3c" title="매수 8,980 / 매도 9,306">-326</td>
-          <td data-val="6.62" style="color:#f39c12">6.6%</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.58% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.27% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.83%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.08 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.16 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 10.7% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="23800" style="font-weight:bold">23,800원</td>
+          <td data-val="-0.21" style="color:#2980b9;font-weight:bold">▼0.21%</td>
+          <td data-val="38868">38,868</td>
+          <td data-val="2.16" style="color:#e74c3c;font-weight:bold">2.16<br><small>매수우위</small></td>
+          <td data-val="2658" style="color:#27ae60" title="매수 4,954 / 매도 2,296">+2,658</td>
+          <td data-val="5.57" style="color:#f39c12">5.6%</td>
+          <td data-val="3.25" style="color:#e0e0e0">3.2%<br><small style="color:#888">2026-08-26</small></td>
           <td data-val="7.8" style="color:#e0e0e0">7.8%<br><small style="color:#888">2026-08-25</small></td>
           <td data-val="5.66" style="color:#e0e0e0">5.7%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="6.39" style="color:#e0e0e0">6.4%<br><small style="color:#888">2026-08-21</small></td>
           <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 신한투자증권 > 한국투자증권 > 미래에셋 > 삼  성<br>
-            <span class="label">매도상위</span> 키움증권 > 신한투자증권 > NH투자증권 > 한국투자증권 > KB증권<br>
-            <span class="label">외국계 매수</span> 없음
-            <br>
-            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
-          </td>
-        </tr>
-        <tr data-price="1693000" data-vol="4328817" data-flu="0.89">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="000660">000660</td>
-          <td class="name" data-val="SK하이닉스">SK하이닉스</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="4">4점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.00% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.12% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -1.17%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.64 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.47 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 6.2% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="1693000" style="font-weight:bold">1,693,000원</td>
-          <td data-val="0.89" style="color:#c0392b;font-weight:bold">▲0.89%</td>
-          <td data-val="4328817">4,328,817</td>
-          <td data-val="1.47" style="color:#e74c3c;font-weight:bold">1.47<br><small>매수우위</small></td>
-          <td data-val="5322" style="color:#27ae60" title="매수 16,755 / 매도 11,433">+5,322</td>
-          <td data-val="5.05" style="color:#f39c12">5.0%</td>
-          <td data-val="4.59" style="color:#e0e0e0">4.6%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="4.94" style="color:#e0e0e0">4.9%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="5.63" style="color:#e0e0e0">5.6%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> SK증권 > 키움증권 > 삼  성 > 미래에셋 > KB증권<br>
-            <span class="label">매도상위</span> 키움증권 > 삼  성 > 미래에셋 > 한국투자증권 > KB증권<br>
-            <span class="label">외국계 매수</span> 없음
-            <br>
-            <span class="reason">일반매수: 키움 매도 상위(매도 1위=050), 매수 1위=025 — 개인 물량을 타 창구가 흡수 (외국계 이탈 없음)</span>
-          </td>
-        </tr>
-        <tr data-price="47850" data-vol="599837" data-flu="0.84">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="082740">082740</td>
-          <td class="name" data-val="한화엔진">한화엔진</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="4">4점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.24% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.95% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.48%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.81 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.67 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.7% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="47850" style="font-weight:bold">47,850원</td>
-          <td data-val="0.84" style="color:#c0392b;font-weight:bold">▲0.84%</td>
-          <td data-val="599837">599,837</td>
-          <td data-val="0.67" style="color:#27ae60;font-weight:bold">0.67<br><small>매도우위</small></td>
-          <td data-val="-1092" style="color:#e74c3c" title="매수 2,236 / 매도 3,328">-1,092</td>
-          <td data-val="7.49" style="color:#f39c12">7.5%</td>
-          <td data-val="7.14" style="color:#e0e0e0">7.1%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="7.12" style="color:#e0e0e0">7.1%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="8.2" style="color:#e0e0e0">8.2%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 미래에셋 > 하나증권 > 유안타<br>
-            <span class="label">매도상위</span> 한국투자증권 > 미래에셋 > 키움증권 > KB증권 > 신한투자증권<br>
+            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 미래에셋 > NH투자증권 > 삼  성<br>
+            <span class="label">매도상위</span> 한국투자증권 > 미래에셋 > 키움증권 > 신한투자증권 > 토  스<br>
             <span class="label">외국계 매수</span> 없음
             <br>
             <span class="reason">일반매수: 외국계 매수(0) >= 매도(0)</span>
           </td>
         </tr>
-        <tr data-price="71600" data-vol="222458" data-flu="1.99">
+        <tr data-price="33600" data-vol="1132569" data-flu="-3.45">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="454910">454910</td>
-          <td class="name" data-val="두산로보틱스">두산로보틱스</td>
+          <td class="code" data-val="015760">015760</td>
+          <td class="name" data-val="한국전력">한국전력</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="4">4점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.27% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.00% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +1.99%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.82 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.32 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 13.6% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="71600" style="font-weight:bold">71,600원</td>
-          <td data-val="1.99" style="color:#c0392b;font-weight:bold">▲1.99%</td>
-          <td data-val="222458">222,458</td>
-          <td data-val="1.32" style="color:#e74c3c;font-weight:bold">1.32<br><small>매수우위</small></td>
-          <td data-val="2635" style="color:#27ae60" title="매수 10,960 / 매도 8,325">+2,635</td>
-          <td data-val="9.79" style="color:#f39c12">9.8%</td>
-          <td data-val="8.45" style="color:#e0e0e0">8.4%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="10.22" style="color:#e74c3c">10.2%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="10.7" style="color:#e74c3c">10.7%<br><small style="color:#888">2026-08-21</small></td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.27% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -1.57% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -2.75%">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.11 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 8.63 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 9.1% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="33600" style="font-weight:bold">33,600원</td>
+          <td data-val="-3.45" style="color:#2980b9;font-weight:bold">▼3.45%</td>
+          <td data-val="1132569">1,132,569</td>
+          <td data-val="8.63" style="color:#e74c3c;font-weight:bold">8.63<br><small>매수우위</small></td>
+          <td data-val="65302" style="color:#27ae60" title="매수 73,860 / 매도 8,558">+65,302</td>
+          <td data-val="7.39" style="color:#f39c12">7.4%</td>
+          <td data-val="4.52" style="color:#e0e0e0">4.5%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="10.33" style="color:#e74c3c">10.3%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="7.32" style="color:#e0e0e0">7.3%<br><small style="color:#888">2026-08-24</small></td>
           <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 신한투자증권 > 삼  성 > 미래에셋 > 한국투자증권<br>
-            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 삼  성 > 신한투자증권 > 한국투자증권<br>
+            <span class="label">매수상위</span> KB증권 > 키움증권 > 미래에셋 > NH투자증권 > 한국투자증권<br>
+            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > 삼  성 > KB증권 > 미래에셋<br>
             <span class="label">외국계 매수</span> 없음
             <br>
-            <span class="reason">일반매수: 키움(050) 매수·매도 동시 1위</span>
+            <span class="reason">일반매수: 키움 매도 상위(매도 1위=003), 매수 1위=017 — 개인 물량을 타 창구가 흡수 (외국계 이탈 없음)</span>
           </td>
         </tr>
-        <tr data-price="551000" data-vol="159296" data-flu="-0.9">
+        <tr data-price="129000" data-vol="7314" data-flu="0.16">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="034730">034730</td>
-          <td class="name" data-val="SK">SK</td>
+          <td class="code" data-val="180640">180640</td>
+          <td class="name" data-val="한진칼">한진칼</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="4">4점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.06% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.71% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -2.82%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.97 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.23 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 8.7% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="551000" style="font-weight:bold">551,000원</td>
-          <td data-val="-0.9" style="color:#2980b9;font-weight:bold">▼0.90%</td>
-          <td data-val="159296">159,296</td>
-          <td data-val="0.23" style="color:#27ae60;font-weight:bold">0.23<br><small>매도우위</small></td>
-          <td data-val="-1719" style="color:#e74c3c" title="매수 500 / 매도 2,219">-1,719</td>
-          <td data-val="9.76" style="color:#f39c12">9.8%</td>
-          <td data-val="9.03" style="color:#e0e0e0">9.0%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="10.41" style="color:#e74c3c">10.4%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="9.83" style="color:#e0e0e0">9.8%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 다올투자증권 > 모건스탠리 > 메릴린치 > 신한투자증권<br>
-            <span class="label">매도상위</span> 미래에셋 > 한국투자증권 > NH투자증권 > 키움증권 > 골드만삭스<br>
-            <span class="label">외국계 매수</span> 모건스탠리, 메릴린치
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 골드만삭스<br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=005) — 개인 과열</span>
-          </td>
-        </tr>
-        <tr data-price="148700" data-vol="375683" data-flu="-0.87">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="161890">161890</td>
-          <td class="name" data-val="한국콜마">한국콜마</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="4">4점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.30% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.86% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.87%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.48 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.60 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 4.7% (상단×0.97 이하)">✓</td><td data-val="2" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">2</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="148700" style="font-weight:bold">148,700원</td>
-          <td data-val="-0.87" style="color:#2980b9;font-weight:bold">▼0.87%</td>
-          <td data-val="375683">375,683</td>
-          <td data-val="1.6" style="color:#e74c3c;font-weight:bold">1.60<br><small>매수우위</small></td>
-          <td data-val="490" style="color:#27ae60" title="매수 1,308 / 매도 818">+490</td>
-          <td data-val="8.19" style="color:#f39c12">8.2%</td>
-          <td data-val="9.43" style="color:#e0e0e0">9.4%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="4.28" style="color:#e0e0e0">4.3%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="10.87" style="color:#e74c3c">10.9%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="2" style="color:#27ae60">🟢 적극매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > NH투자증권 > 미래에셋 > 모건스탠리<br>
-            <span class="label">매도상위</span> 키움증권 > 미래에셋 > 삼  성 > NH투자증권 > 신한투자증권<br>
-            <span class="label">외국계 매수</span> 모건스탠리
-            <br>
-            <span class="reason">적극매수: 키움 매도 상위 + 외국계 1개 단독 매수 → ['모건스탠리'] (개인물량 외인 흡수)</span>
-          </td>
-        </tr>
-        <tr data-price="388500" data-vol="469227" data-flu="5.86">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="028260">028260</td>
-          <td class="name" data-val="삼성물산">삼성물산</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.15% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.40% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +4.72%">✓</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.88 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.25 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 1.8% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="388500" style="font-weight:bold">388,500원</td>
-          <td data-val="5.86" style="color:#c0392b;font-weight:bold">▲5.86%</td>
-          <td data-val="469227">469,227</td>
-          <td data-val="0.25" style="color:#27ae60;font-weight:bold">0.25<br><small>매도우위</small></td>
-          <td data-val="-6392" style="color:#e74c3c" title="매수 2,092 / 매도 8,484">-6,392</td>
-          <td data-val="8.81" style="color:#f39c12">8.8%</td>
-          <td data-val="3.33" style="color:#e0e0e0">3.3%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="11.54" style="color:#e74c3c">11.5%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="11.55" style="color:#e74c3c">11.6%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 신한투자증권 > 키움증권 > JP모간서울 > 유안타 > 한국투자증권<br>
-            <span class="label">매도상위</span> 메릴린치 > 삼  성 > 한국투자증권 > NH투자증권 > 신한투자증권<br>
-            <span class="label">외국계 매수</span> JP모간서울
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 메릴린치<br>
-            <span class="reason">일반매수: 외국계 매수(1) >= 매도(1)</span>
-          </td>
-        </tr>
-        <tr data-price="677000" data-vol="74821" data-flu="4.48">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="000810">000810</td>
-          <td class="name" data-val="삼성화재">삼성화재</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.92% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.16% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 +5.12%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.67 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.67 (기준 < 1.0)">✓</td><td data-val="0" style="color:#e74c3c" title="BB 여유 -3.3% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="677000" style="font-weight:bold">677,000원</td>
-          <td data-val="4.48" style="color:#c0392b;font-weight:bold">▲4.48%</td>
-          <td data-val="74821">74,821</td>
-          <td data-val="0.67" style="color:#27ae60;font-weight:bold">0.67<br><small>매도우위</small></td>
-          <td data-val="-172" style="color:#e74c3c" title="매수 349 / 매도 521">-172</td>
-          <td data-val="6.96" style="color:#f39c12">7.0%</td>
-          <td data-val="6.02" style="color:#e0e0e0">6.0%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="3.36" style="color:#e0e0e0">3.4%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="11.5" style="color:#e74c3c">11.5%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 메릴린치 > 골드만삭스 > NH투자증권 > 키움증권 > BNK증권<br>
-            <span class="label">매도상위</span> 신한투자증권 > NH투자증권 > JP모간서울 > 골드만삭스 > 디에스투자증권<br>
-            <span class="label">외국계 매수</span> 메릴린치, 골드만삭스
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울, 골드만삭스<br>
-            <span class="reason">일반매수: 외국계 매수(2) >= 매도(2)</span>
-          </td>
-        </tr>
-        <tr data-price="118100" data-vol="428091" data-flu="0.0">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="000880">000880</td>
-          <td class="name" data-val="한화">한화</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.06% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.08% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.08%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.29 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.43 (기준 < 1.0)">✗</td><td data-val="0" style="color:#e74c3c" title="BB 여유 -16.7% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="118100" style="font-weight:bold">118,100원</td>
-          <td data-val="0.0" style="color:#555;font-weight:bold">─0.00%</td>
-          <td data-val="428091">428,091</td>
-          <td data-val="1.43" style="color:#e74c3c;font-weight:bold">1.43<br><small>매수우위</small></td>
-          <td data-val="640" style="color:#27ae60" title="매수 2,125 / 매도 1,485">+640</td>
-          <td data-val="2.77" style="color:#27ae60">2.8%</td>
-          <td data-val="1.22" style="color:#e0e0e0">1.2%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="2.95" style="color:#e0e0e0">3.0%<br><small style="color:#888">2026-07-29</small></td>
-          <td data-val="4.14" style="color:#e0e0e0">4.1%<br><small style="color:#888">2026-07-28</small></td>
-          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
-          <td class="detail">
-            <span class="label">매수상위</span> JP모간서울 > 키움증권 > 골드만삭스 > 삼  성 > 모건스탠리<br>
-            <span class="label">매도상위</span> 키움증권 > 삼  성 > 한국투자증권 > 모건스탠리 > 골드만삭스<br>
-            <span class="label">외국계 매수</span> JP모간서울, 모건스탠리, 골드만삭스
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 모건스탠리, 골드만삭스<br>
-            <span class="reason">일반매수: 키움 매도 상위, 외국계 매수(3) > 매도(2)</span>
-          </td>
-        </tr>
-        <tr data-price="582000" data-vol="188055" data-flu="-3.32">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="011070">011070</td>
-          <td class="name" data-val="LG이노텍">LG이노텍</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.91% (기준 ≥ +0.5%)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.49% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -4.75%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.67 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 7.89 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 14.2% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="582000" style="font-weight:bold">582,000원</td>
-          <td data-val="-3.32" style="color:#2980b9;font-weight:bold">▼3.32%</td>
-          <td data-val="188055">188,055</td>
-          <td data-val="7.89" style="color:#e74c3c;font-weight:bold">7.89<br><small>매수우위</small></td>
-          <td data-val="3644" style="color:#27ae60" title="매수 4,173 / 매도 529">+3,644</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +1.17% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.46% (기준 ≥ +0.3%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="현재가-시가 +0.08%">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="최근 3분봉 저점 연속 상승">✓</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.05 (기준 ≥ 0.08)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.42 (기준 < 1.0)">✗</td><td data-val="0" style="color:#e74c3c" title="BB 여유 -0.4% (상단×0.97 이하)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="129000" style="font-weight:bold">129,000원</td>
+          <td data-val="0.16" style="color:#c0392b;font-weight:bold">▲0.16%</td>
+          <td data-val="7314">7,314</td>
+          <td data-val="2.42" style="color:#e74c3c;font-weight:bold">2.42<br><small>매수우위</small></td>
+          <td data-val="102" style="color:#27ae60" title="매수 174 / 매도 72">+102</td>
           <td data-val="0.0" style="color:#27ae60">0.0%</td>
           <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
           <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
           <td data-val="0.0" style="color:#e0e0e0">0.0%<br><small style="color:#888">─</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 미래에셋 > 삼  성 > 한국투자증권 > 메릴린치<br>
-            <span class="label">매도상위</span> 한국투자증권 > 삼  성 > 키움증권 > 신한투자증권 > 미래에셋<br>
-            <span class="label">외국계 매수</span> 메릴린치
-            <br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=003) — 개인 과열</span>
-          </td>
-        </tr>
-        <tr data-price="466500" data-vol="701254" data-flu="-6.33">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="012330">012330</td>
-          <td class="name" data-val="현대모비스">현대모비스</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.66% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.40% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -7.26%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 1.45 (기준 ≥ 1.42)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 5.24 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 14.4% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="466500" style="font-weight:bold">466,500원</td>
-          <td data-val="-6.33" style="color:#2980b9;font-weight:bold">▼6.33%</td>
-          <td data-val="701254">701,254</td>
-          <td data-val="5.24" style="color:#e74c3c;font-weight:bold">5.24<br><small>매수우위</small></td>
-          <td data-val="8729" style="color:#27ae60" title="매수 10,788 / 매도 2,059">+8,729</td>
-          <td data-val="7.74" style="color:#f39c12">7.7%</td>
-          <td data-val="4.71" style="color:#e0e0e0">4.7%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="10.06" style="color:#e74c3c">10.1%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="8.44" style="color:#e0e0e0">8.4%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 삼  성 > 신한투자증권 > NH투자증권 > JP모간서울<br>
-            <span class="label">매도상위</span> 모건스탠리 > 한국투자증권 > 삼  성 > 키움증권 > NH투자증권<br>
-            <span class="label">외국계 매수</span> JP모간서울
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 모건스탠리<br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=036) — 개인 과열</span>
-          </td>
-        </tr>
-        <tr data-price="122100" data-vol="624807" data-flu="1.41">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="066970">066970</td>
-          <td class="name" data-val="엘앤에프">엘앤에프</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.79% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.08% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.25%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.56 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.68 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.7% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="122100" style="font-weight:bold">122,100원</td>
-          <td data-val="1.41" style="color:#c0392b;font-weight:bold">▲1.41%</td>
-          <td data-val="624807">624,807</td>
-          <td data-val="0.68" style="color:#27ae60;font-weight:bold">0.68<br><small>매도우위</small></td>
-          <td data-val="-465" style="color:#e74c3c" title="매수 986 / 매도 1,451">-465</td>
-          <td data-val="7.56" style="color:#f39c12">7.6%</td>
-          <td data-val="8.59" style="color:#e0e0e0">8.6%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="6.52" style="color:#e0e0e0">6.5%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="7.58" style="color:#e0e0e0">7.6%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 한국투자증권 > 키움증권 > 삼  성 > 미래에셋 > KB증권<br>
-            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > 삼  성 > JP모간서울 > 골드만삭스<br>
+            <span class="label">매수상위</span> NH투자증권 > 신한투자증권 > 유진투자증권 > 아이엠증권 > KB증권<br>
+            <span class="label">매도상위</span> 신한투자증권 > 한국투자증권 > 미래에셋 > 키움증권 > LS증권<br>
             <span class="label">외국계 매수</span> 없음
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울, 골드만삭스<br>
-            <span class="reason">매수금지: 외국계 매도 2개 단독 이탈 → ['JP모간서울', '골드만삭스']</span>
+            <br>
+            <span class="reason">일반매수: 외국계 매수(0) >= 매도(0)</span>
           </td>
         </tr>
-        <tr data-price="80200" data-vol="32458" data-flu="-0.62">
+        <tr data-price="478000" data-vol="3315" data-flu="1.27">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="456040">456040</td>
-          <td class="name" data-val="OCI">OCI</td>
+          <td class="code" data-val="002380">002380</td>
+          <td class="name" data-val="KCC">KCC</td>
           <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="3">3점</td>
-          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.90% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.25% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.74%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.72 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.11 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 9.0% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="80200" style="font-weight:bold">80,200원</td>
-          <td data-val="-0.62" style="color:#2980b9;font-weight:bold">▼0.62%</td>
-          <td data-val="32458">32,458</td>
-          <td data-val="0.11" style="color:#27ae60;font-weight:bold">0.11<br><small>매도우위</small></td>
-          <td data-val="-936" style="color:#e74c3c" title="매수 112 / 매도 1,048">-936</td>
-          <td data-val="7.88" style="color:#f39c12">7.9%</td>
-          <td data-val="8.41" style="color:#e0e0e0">8.4%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="11.69" style="color:#e74c3c">11.7%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="3.55" style="color:#e0e0e0">3.5%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="score" data-val="4">4점</td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.47% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +2.99% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.83%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.14 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 4.91 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.8% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="478000" style="font-weight:bold">478,000원</td>
+          <td data-val="1.27" style="color:#c0392b;font-weight:bold">▲1.27%</td>
+          <td data-val="3315">3,315</td>
+          <td data-val="4.91" style="color:#e74c3c;font-weight:bold">4.91<br><small>매수우위</small></td>
+          <td data-val="207" style="color:#27ae60" title="매수 260 / 매도 53">+207</td>
+          <td data-val="6.16" style="color:#f39c12">6.2%</td>
+          <td data-val="1.99" style="color:#e0e0e0">2.0%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="6.46" style="color:#e0e0e0">6.5%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="10.04" style="color:#e74c3c">10.0%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 한국투자증권 > 미래에셋 > 신한투자증권 > 키움증권 > JP모간서울<br>
-            <span class="label">매도상위</span> 한국투자증권 > 신한투자증권 > JP모간서울 > 모건스탠리 > 씨티그룹<br>
-            <span class="label">외국계 매수</span> JP모간서울
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울, 모건스탠리, 씨티그룹<br>
-            <span class="reason">매수금지: 외국계 매수(1) < 매도(3)</span>
+            <span class="label">매수상위</span> 한국투자증권 > 신한투자증권 > KB증권 > 교  보 > 미래에셋<br>
+            <span class="label">매도상위</span> 유진투자증권 > 한국투자증권 > NH투자증권 > 미래에셋 > 키움증권<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">일반매수: 외국계 매수(0) >= 매도(0)</span>
           </td>
         </tr>
-        <tr data-price="74800" data-vol="9339" data-flu="0.67">
+        <tr data-price="74200" data-vol="790" data-flu="-0.54">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
           <td class="code" data-val="071320">071320</td>
           <td class="name" data-val="지역난방공사">지역난방공사</td>
           <td data-val="0" style="color:#555">─</td>
           <td class="score" data-val="3">3점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.28% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.00% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 +0.67%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.65 (기준 ≥ 1.42)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="호가 매수/매도 0.22 (기준 < 1.0)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 5.9% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="74800" style="font-weight:bold">74,800원</td>
-          <td data-val="0.67" style="color:#c0392b;font-weight:bold">▲0.67%</td>
-          <td data-val="9339">9,339</td>
-          <td data-val="0.22" style="color:#27ae60;font-weight:bold">0.22<br><small>매도우위</small></td>
-          <td data-val="-731" style="color:#e74c3c" title="매수 202 / 매도 933">-731</td>
-          <td data-val="4.56" style="color:#27ae60">4.6%</td>
+          <td data-val="1" style="color:#2ecc71;font-weight:bold" title="day1 +0.60% (기준 ≥ +0.5%)">✓</td><td data-val="0" style="color:#e74c3c" title="시가 갭 -0.67% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.54%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.07 (기준 ≥ 0.08)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.54 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 7.0% (상단×0.97 이하)">✓</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">1</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="74200" style="font-weight:bold">74,200원</td>
+          <td data-val="-0.54" style="color:#2980b9;font-weight:bold">▼0.54%</td>
+          <td data-val="790">790</td>
+          <td data-val="2.54" style="color:#e74c3c;font-weight:bold">2.54<br><small>매수우위</small></td>
+          <td data-val="145" style="color:#27ae60" title="매수 239 / 매도 94">+145</td>
+          <td data-val="2.51" style="color:#27ae60">2.5%</td>
+          <td data-val="0.8" style="color:#e0e0e0">0.8%<br><small style="color:#888">2026-08-26</small></td>
           <td data-val="1.8" style="color:#e0e0e0">1.8%<br><small style="color:#888">2026-08-25</small></td>
           <td data-val="4.93" style="color:#e0e0e0">4.9%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="6.95" style="color:#e0e0e0">7.0%<br><small style="color:#888">2026-08-21</small></td>
           <td data-val="1" style="color:#f39c12">🟡 일반매수</td>
           <td class="detail">
-            <span class="label">매수상위</span> 한국투자증권 > JP모간서울 > 신한투자증권 > KB증권 > 메리츠<br>
-            <span class="label">매도상위</span> 신한투자증권 > 한국투자증권 > 미래에셋 > NH투자증권 > 모건스탠리<br>
-            <span class="label">외국계 매수</span> JP모간서울
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 모건스탠리<br>
+            <span class="label">매수상위</span> 토  스 > 키움증권 > 골드만삭스 > 삼  성 > 미래에셋<br>
+            <span class="label">매도상위</span> 신한투자증권 > 한국투자증권 > 삼  성 > NH투자증권 > JP모간서울<br>
+            <span class="label">외국계 매수</span> 골드만삭스
+            &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울<br>
             <span class="reason">일반매수: 외국계 매수(1) >= 매도(1)</span>
           </td>
         </tr>
-        <tr data-price="82700" data-vol="327587" data-flu="-5.59">
+        <tr data-price="39550" data-vol="3131" data-flu="-0.75">
           <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="103140">103140</td>
-          <td class="name" data-val="풍산">풍산</td>
+          <td class="code" data-val="000670">000670</td>
+          <td class="name" data-val="영풍">영풍</td>
           <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="2">2점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.36% (기준 ≥ +0.5%)">✗</td><td data-val="0" style="color:#e74c3c" title="시가 갭 +0.23% (기준 ≥ +0.3%)">✗</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -5.59%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.46 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.25 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 13.6% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="매도 1위 = 키움(050)/미래에셋(005)">✓</td>
-          <td data-val="82700" style="font-weight:bold">82,700원</td>
-          <td data-val="-5.59" style="color:#2980b9;font-weight:bold">▼5.59%</td>
-          <td data-val="327587">327,587</td>
-          <td data-val="1.25" style="color:#e74c3c;font-weight:bold">1.25<br><small>매수우위</small></td>
-          <td data-val="578" style="color:#27ae60" title="매수 2,889 / 매도 2,311">+578</td>
-          <td data-val="6.55" style="color:#f39c12">6.5%</td>
-          <td data-val="8.53" style="color:#e0e0e0">8.5%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="4.33" style="color:#e0e0e0">4.3%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="6.79" style="color:#e0e0e0">6.8%<br><small style="color:#888">2026-08-21</small></td>
+          <td class="score" data-val="3">3점</td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.01% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +1.75% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -2.59%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.09 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 1.80 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 6.8% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="39550" style="font-weight:bold">39,550원</td>
+          <td data-val="-0.75" style="color:#2980b9;font-weight:bold">▼0.75%</td>
+          <td data-val="3131">3,131</td>
+          <td data-val="1.8" style="color:#e74c3c;font-weight:bold">1.80<br><small>매수우위</small></td>
+          <td data-val="146" style="color:#27ae60" title="매수 329 / 매도 183">+146</td>
+          <td data-val="8.09" style="color:#f39c12">8.1%</td>
+          <td data-val="6.98" style="color:#e0e0e0">7.0%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="10.5" style="color:#e74c3c">10.5%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="6.78" style="color:#e0e0e0">6.8%<br><small style="color:#888">2026-08-24</small></td>
           <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
           <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 미래에셋 > 삼  성 > 리딩투자 > NH투자증권<br>
-            <span class="label">매도상위</span> 미래에셋 > 모건스탠리 > 한국투자증권 > 키움증권 > 골드만삭스<br>
-            <span class="label">외국계 매수</span> 없음
-            &nbsp;│&nbsp;<span class="label">외국계 매도</span> 모건스탠리, 골드만삭스<br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=005) — 개인 과열</span>
-          </td>
-        </tr>
-        <tr data-price="52800" data-vol="234048" data-flu="-4.35">
-          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
-          <td class="code" data-val="120110">120110</td>
-          <td class="name" data-val="코오롱인더">코오롱인더</td>
-          <td data-val="0" style="color:#555">─</td>
-          <td class="score" data-val="2">2점</td>
-          <td data-val="0" style="color:#e74c3c" title="day1 +0.14% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +0.90% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -5.38%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="0" style="color:#e74c3c" title="거래량비 0.57 (기준 ≥ 1.42)">✗</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 3.45 (기준 < 1.0)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="BB 여유 14.4% (상단×0.97 이하)">✓</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
-          <td data-val="52800" style="font-weight:bold">52,800원</td>
-          <td data-val="-4.35" style="color:#2980b9;font-weight:bold">▼4.35%</td>
-          <td data-val="234048">234,048</td>
-          <td data-val="3.45" style="color:#e74c3c;font-weight:bold">3.45<br><small>매수우위</small></td>
-          <td data-val="3762" style="color:#27ae60" title="매수 5,295 / 매도 1,533">+3,762</td>
-          <td data-val="4.98" style="color:#27ae60">5.0%</td>
-          <td data-val="6.46" style="color:#e0e0e0">6.5%<br><small style="color:#888">2026-08-25</small></td>
-          <td data-val="4.2" style="color:#e0e0e0">4.2%<br><small style="color:#888">2026-08-24</small></td>
-          <td data-val="4.29" style="color:#e0e0e0">4.3%<br><small style="color:#888">2026-08-21</small></td>
-          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
-          <td class="detail">
-            <span class="label">매수상위</span> 키움증권 > 한국투자증권 > 하나증권 > 신한투자증권 > 유진투자증권<br>
-            <span class="label">매도상위</span> 모건스탠리 > 신한투자증권 > 한국투자증권 > JP모간서울 > 키움증권<br>
+            <span class="label">매수상위</span> NH투자증권 > 신한투자증권 > 키움증권 > DB증권 > 신  영<br>
+            <span class="label">매도상위</span> 삼  성 > 신한투자증권 > JP모간서울 > 유진투자증권 > 모건스탠리<br>
             <span class="label">외국계 매수</span> 없음
             &nbsp;│&nbsp;<span class="label">외국계 매도</span> JP모간서울, 모건스탠리<br>
-            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=036) — 개인 과열</span>
+            <span class="reason">매수금지: 외국계 매도 2개 단독 이탈 → ['JP모간서울', '모건스탠리']</span>
+          </td>
+        </tr>
+        <tr data-price="389500" data-vol="57583" data-flu="0.52">
+          <td class="col-check" data-val="0"><label class="row-check-label"><input type="checkbox" class="row-check" title="체크하면 이 행을 강조 표시" aria-label="행 강조"></label></td>
+          <td class="code" data-val="028260">028260</td>
+          <td class="name" data-val="삼성물산">삼성물산</td>
+          <td data-val="0" style="color:#555">─</td>
+          <td class="score" data-val="2">2점</td>
+          <td data-val="0" style="color:#e74c3c" title="day1 +0.12% (기준 ≥ +0.5%)">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="시가 갭 +2.35% (기준 ≥ +0.3%)">✓</td><td data-val="0" style="color:#e74c3c" title="현재가-시가 -0.76%">✗</td><td data-val="0" style="color:#e74c3c" title="최근 3분봉 저점 연속 상승">✗</td><td data-val="0" style="color:#e74c3c" title="최신 분봉 거래량 > 4봉 전">✗</td><td data-val="1" style="color:#2ecc71;font-weight:bold" title="거래량비 0.11 (기준 ≥ 0.08)">✓</td><td data-val="0" style="color:#e74c3c" title="호가 매수/매도 2.92 (기준 < 1.0)">✗</td><td data-val="0" style="color:#e74c3c" title="BB 여유 2.2% (상단×0.97 이하)">✗</td><td data-val="0" style="color:#e74c3c;font-weight:bold" title="거래원 판정 점수 (일반+1/적극+2)">0</td><td data-val="0" style="color:#e74c3c" title="매도 1위 = 키움(050)/미래에셋(005)">✗</td>
+          <td data-val="389500" style="font-weight:bold">389,500원</td>
+          <td data-val="0.52" style="color:#c0392b;font-weight:bold">▲0.52%</td>
+          <td data-val="57583">57,583</td>
+          <td data-val="2.92" style="color:#e74c3c;font-weight:bold">2.92<br><small>매수우위</small></td>
+          <td data-val="1603" style="color:#27ae60" title="매수 2,439 / 매도 836">+1,603</td>
+          <td data-val="7.07" style="color:#f39c12">7.1%</td>
+          <td data-val="6.34" style="color:#e0e0e0">6.3%<br><small style="color:#888">2026-08-26</small></td>
+          <td data-val="3.33" style="color:#e0e0e0">3.3%<br><small style="color:#888">2026-08-25</small></td>
+          <td data-val="11.54" style="color:#e74c3c">11.5%<br><small style="color:#888">2026-08-24</small></td>
+          <td data-val="0" style="color:#e74c3c">🔴 매수금지</td>
+          <td class="detail">
+            <span class="label">매수상위</span> 키움증권 > 미래에셋 > NH투자증권 > 신한투자증권 > 한국투자증권<br>
+            <span class="label">매도상위</span> 한국투자증권 > 키움증권 > 삼  성 > 신한투자증권 > 미래에셋<br>
+            <span class="label">외국계 매수</span> 없음
+            <br>
+            <span class="reason">매수금지(최우선): 키움(050) 매수 1위, 매도 1위 아님 (매도 1위=003) — 개인 과열</span>
           </td>
         </tr>
   </tbody>
